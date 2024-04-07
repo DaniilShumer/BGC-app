@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80572C"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/numberOfExpansions"
+        android:layout_width="59dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="130dp"
+        android:text="TextView"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/numberOfGames"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/numberOfGames"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="35dp"
+        android:text="TextView"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView4" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="40dp"
+        android:text="Dodatków w kolekcji:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
+
+    <TextView
+        android:id="@+id/lastSync"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="65dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/syncView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="104dp"
+        android:text="UŻYTKOWNIK:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="100dp"
+        android:text="Gier w kolekcji:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="129dp"
+        android:text="TextView"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="65dp"
+        android:text="Ostatnia synchronizacja:"
+        app:layout_constraintBottom_toTopOf="@+id/eraseData"
+        app:layout_constraintEnd_toStartOf="@+id/lastSync"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expansionsList" />
+
+    <Button
+        android:id="@+id/eraseData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="#BC1C1C"
+        android:text="USUŃĄĆ DANE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/syncView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/gameList"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="82dp"
+        android:layout_marginEnd="130dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/custom_button"
+        android:text="Tabela gier"
+        app:layout_constraintBottom_toTopOf="@+id/expansionsList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numberOfExpansions" />
+
+    <Button
+        android:id="@+id/expansionsList"
+        android:layout_width="149dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="150dp"
+        android:background="@drawable/custom_button"
+        android:text="Tabela dodatków"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/syncView"
+        app:layout_constraintEnd_toEndOf="@+id/gameList"
+        app:layout_constraintStart_toStartOf="@+id/gameList" />
+
+    <Button
+        android:id="@+id/syncView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="#12AA9C"
+        android:text="SYNCHRONIZACJA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/eraseData" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
